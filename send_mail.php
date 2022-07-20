@@ -20,7 +20,7 @@ $row = mysqli_fetch_array($received_query);
 $receiver =$row['user_name'];
 
 	if ($receiver=="") { die ("Receiver failed,contact the admin! ");}
-	if ($receiver=="pablo444") { die ("You are banned from inbox system for spamming! ");}
+	
 	
 if (mysqli_num_rows($received_query) >0) {  
 		
