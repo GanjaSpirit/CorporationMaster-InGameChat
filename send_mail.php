@@ -29,7 +29,7 @@ if (mysqli_num_rows($received_query) >0) {
 	
 	
 		$currentserverdate = strtotime("now");
-		$execsql = "INSERT INTO messages (`sender`, `receiver`,`message`, `seen_flag`, `time`) VALUES ('$user','$recipient', '$message' ,0, $currentserverdate )";
+		$execsql = "INSERT INTO messages (`sender`, `receiver`,`message`, `seen_flag`, `time`) VALUES ('$user','$chkrecipient', '$message' ,0, $currentserverdate )";
 		$insert = mysqli_query($link,$execsql)or die('Message failed, contact the admin!' . mysqli_error());
 		
 		
